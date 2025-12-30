@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/deafults.css">
     <link rel="stylesheet" href="../Styles/index.css">
-    <title>Document</title>
+    <title>Store | main page</title>
 </head>
 <body>
-    <script src="../Js/index.js"></script>
+    <header>
+        <h1>Mehrdad Store</h1>
+        <a href="./dashboard.html" id="dashboard">
+            <p>Dashboard</p>
+            <i class="fa-solid fa-home"></i>
+        </a>
+        <a href="./auth.html" id="login">
+            <p>Login</p>
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </a> 
+    </header>
+    <section>
+        <h1>Shop</h1>
+        <div id="search-container">
+            <input type="text" placeholder="Search product" id="product-search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </section>
+    <main>
+        <div id="products"><span></span></div>
+        <div id="filter">
+            <div id="title">
+                <i class="fa-solid fa-sliders"></i>
+                <h6>Categories</h6>
+            </div>
+            <p id="firstCategory">All</p>
+            <p> Electronics</p>
+            <p>Jewelery</p>
+            <p>Men's clothing</p>
+            <p>Women's clothing</p>
+        </div>
+    </main>
+    <script src="../Js/index.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/4995e2f112.js" crossorigin="anonymous"></script>
 </body>
 </html>

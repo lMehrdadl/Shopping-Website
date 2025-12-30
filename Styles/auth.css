@@ -14,7 +14,7 @@
     border-radius: 15px;
     box-shadow: -1px 0px 10px 3px rgba(124, 124, 124, 0.82);
     width: 26vw;
-    height: 43vh;
+    height: 260px;
 }
 
 h1 {
@@ -28,7 +28,7 @@ h1 {
     align-items: center;
 }
 
-button {
+.login-button {
     height: 40px;
     width: calc(26vw - 6vw);
     border-radius: 10px;
@@ -36,14 +36,22 @@ button {
     font-size: 1rem;
     background-color: var(--color-primary);
     color: #fff;
-    margin-top: 15%;
+    margin-top: 25px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
-#inputs input {
+.button-showMessege {
+    margin-top: 20px;
+}
+
+.inputs-showMessage {
+    margin-top: 20px;
+}
+
+.input {
     color: var(--color-primary);
-    margin-top: 15%;
+    margin-top: 40px;
     height: 40px;
     padding: 15px;
     width: calc(26vw - 6vw);
@@ -62,6 +70,36 @@ a {
     padding: 10px;
     color: black;
     margin-top: 20px;
+}
+
+.show-messege {
+    color: red;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.input-new {
+    color: var(--color-primary);
+    margin-top: 28px;
+    height: 40px;
+    padding: 15px;
+    width: calc(26vw - 6vw);
+    border-radius: 10px;
+    border: 2px solid silver;
+}
+
+.login-button-new {
+    height: 40px;
+    width: calc(26vw - 6vw);
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 
 input:focus {

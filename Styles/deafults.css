@@ -18,3 +18,12 @@ body {
     margin: auto;
     background-color: var(--color-background);
 }
+
+a {
+    text-decoration: none;
+}
+
+
+input:focus {
+    outline: none;
+}

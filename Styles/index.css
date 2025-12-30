@@ -1,0 +1,126 @@
+header {
+    height: 70px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 30px;
+    padding: 8px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px -4px #828282;
+    transition: all 0.3s ease;
+}
+
+a i {
+    margin-left: 5px;
+}
+
+section {
+    margin-top: 30px;
+}
+
+#search-container {
+    margin-top: 13px;
+}
+
+#product-search {
+    width: 250px;
+    padding: 5px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+
+#products span {
+    width: 100px;
+    height: 100px;
+    border: 7px solid var(--color-primary);
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 0.8s linear infinite;
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: #fff;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filter {
+    width: 210px;
+    height: 260px;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px -6px #828282;
+}
+
+#filter i {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#title {
+    display: flex;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+#filter p {
+    height: 38px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition:  all 0.1s ease-in;
+}
+
+#firstCategory {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+header a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+#filter p:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

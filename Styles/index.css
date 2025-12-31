@@ -42,15 +42,15 @@ section {
 }
 
 #products span {
-    width: 100px;
-    height: 100px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
     border: 7px solid var(--color-primary);
     border-bottom-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
     display: inline-block;
     animation: rotation 0.8s linear infinite;
-    display: none;
 }
 
 button {
@@ -67,11 +67,11 @@ main {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #filter {
-    width: 210px;
+    width: 30%;
     height: 260px;
     background-color: #fff;
     padding: 20px;
@@ -101,9 +101,97 @@ main {
     transition:  all 0.1s ease-in;
 }
 
-#firstCategory {
+.selected {
     background-color: var(--color-secondary);
     color: var(--color-primary);
+}
+
+#products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 0;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 380px;
+    background-color: #fff;
+    margin: 0 45px 50px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px -6px #828282;
+}
+
+#rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+#info {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#info > p {
+    color: gray;
+}
+
+#buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    height: 30px;
+    width: 50px;
+    transition: all 0.2s ease-in;
+}
+
+#buy i {
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+.rate:first-child {
+    color: var(--color-error);
+}
+
+.rate:last-child {
+    color: var(--color-warning);
+}
+
+.rate {
+    display: flex;
+    padding: 4px;
+    font-size: 13px;
+    flex-direction: row-reverse;    
+    background-color: rgba(241, 241, 241, 0.986);
+    border-radius: 4px;
+}
+
+.rate i {
+    margin-right: 3px;
+}
+
+#product-title {
+    color: var(--color-primary);
+    margin: 0 0 20px 10px;
+    align-self: flex-start;
 }
 
 header a:hover {
@@ -113,6 +201,11 @@ header a:hover {
 
 #filter p:hover {
     cursor: pointer;
+    color: var(--color-primary);
+}
+
+#buy:hover {
+    background-color: var(--color-secondary);
     color: var(--color-primary);
 }
 

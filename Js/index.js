@@ -8,9 +8,10 @@ const products = document.getElementById("products");
 const searchInput = document.getElementById("product-search");
 const searchButton = document.getElementById("search-button");
 const filterButton = document.querySelector("main").querySelectorAll("p");
-const allButton = document.getElementById("allButton");
 
 let allProducts = null;
+let filterName = "all";
+let searchProduct = "";
 
 const showProducts = async (productList) => {
   products.innerHTML = "";
@@ -54,18 +55,28 @@ const init = async () => {
   showProducts(allProducts);
 };
 
+const filterSearch = () => {
+  const filteredProducts = allProducts.filter((product) => {
+    if (filterName === "all") {
+      return product.title.toLowerCase().includes(searchProduct);
+    } else {
+      return (
+        product.title.toLowerCase().includes(searchProduct) &&
+        product.category.toLowerCase() === filterName
+      );
+    }
+  });
+  showProducts(filteredProducts);
+};
+
 const searchHandler = () => {
-  const searchProduct = searchInput.value.trim().toLowerCase();
+  searchProduct = searchInput.value.trim().toLowerCase();
   products.innerHTML = `<span></span>`;
-  if (!searchProduct) showProducts(allProducts);
-  const filterdProducts = allProducts.filter((product) =>
-    product.title.toLowerCase().includes(searchProduct)
-  );
-  showProducts(filterdProducts);
+  filterSearch();
 };
 
 const filterHandler = (event) => {
-  const filterName = event.target.innerText.toLowerCase();
+  filterName = event.target.innerText.toLowerCase();
   filterButton.forEach((button) => {
     if (button.innerText.toLowerCase() === filterName) {
       button.className = "selected";
@@ -73,14 +84,7 @@ const filterHandler = (event) => {
       button.className = "";
     }
   });
-  if (filterName === "all") {
-    showProducts(allProducts);
-  } else {
-    const filteredProducts = allProducts.filter(
-      (product) => product.category.toLowerCase() === filterName
-    );
-    showProducts(filteredProducts);
-  }
+  filterSearch();
 };
 
 document.addEventListener("DOMContentLoaded", init);

@@ -1,0 +1,115 @@
+header {
+    height: 70px;
+    margin: 30px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+#controls {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#controls a {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 30px;
+    padding: 8px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px -4px #828282;
+    transition: all 0.3s ease;
+}
+
+#controls a:last-child {
+    color: var(--color-error);
+}
+
+#controls i {
+    margin-left: 5px;
+}
+
+#users span {
+    display: inline-block;
+    margin: 60px 0 0 calc(80% / 2);
+    width: 200px;
+    height: 200px;
+    border: 7px solid var(--color-primary);
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: rotation 0.8s linear infinite;
+}
+
+#users {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user {
+    height: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -4px #828282;
+}
+
+.user h2 {
+    color: #fff;
+    background-color: var(--color-primary);
+    width:40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.userInfo {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail {
+    background-color: var(--color-background);
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 50px;
+}
+
+.title {
+    display: flex;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.title i {
+    margin-right: 5px;
+}
+
+.detail p:last-child {
+    font-size: 15px;
+}
+
+#controls a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+#controls a:last-child:hover {
+    background-color: var(--color-error);
+    color: #fff;
+}
+

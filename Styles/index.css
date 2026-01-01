@@ -42,14 +42,14 @@ section {
 }
 
 #products span {
-    text-align: center;
+    margin: 30px 0 0 calc(70% / 2);
     width: 200px;
     height: 200px;
     border: 7px solid var(--color-primary);
     border-bottom-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
     animation: rotation 0.8s linear infinite;
 }
 
